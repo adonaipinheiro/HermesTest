@@ -16,6 +16,8 @@ import {
   View,
   Text,
   StatusBar,
+  TouchableHighlight,
+  TouchableOpacity,
 } from 'react-native';
 
 import {
@@ -43,7 +45,18 @@ const App = () => {
             </View>
           )}
           <View style={styles.body}>
-            <View style={styles.sectionContainer}>
+            <TouchableOpacity
+              style={{width: 50, height: 50}}
+              accessible={true}
+              accessibilityLabel="Go back"
+              accessibilityHint="Navigates to the previous screen">
+              <Text>Oi</Text>
+            </TouchableOpacity>
+            <View
+              style={styles.sectionContainer}
+              accessible={true}
+              accessibilityLabel="Go back"
+              accessibilityHint="Navigates to the previous screen">
               <Text style={styles.sectionTitle}>Step One</Text>
               <Text style={styles.sectionDescription}>
                 Edit <Text style={styles.highlight}>App.tsx</Text> to change
